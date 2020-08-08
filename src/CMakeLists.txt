@@ -6,6 +6,7 @@ option(ODROID "Set to ON if targeting an Odroid" ${ODROID})
 option(MUPENPLUSAPI "Set to ON for Mupen64Plus plugin" ${MUPENPLUSAPI})
 option(MESA "Set to ON to disable Raspberry Pi autodetection" ${MESA})
 option(VERO4K "Set to ON if targeting a Vero4k" ${VERO4K})
+option(KMS "Set to ON if targeting a KMS" ${KMS})
 option(ANDROID "Set to ON if targeting an Android device" ${ANDROID})
 option(GL_PROFILE "Set to ON to turn on GL profiling" ${GL_PROFILE})
 
@@ -258,6 +259,12 @@ if(VERO4K)
   -DVERO4K
    )
 endif(VERO4K)
+
+if(KMS)
+  add_definitions(
+  -DKMS
+   )
+endif(KMS)
 
 if(ANDROID)
    add_definitions(-DOS_ANDROID -DEGL_EGLEXT_PROTOTYPES -DEGL)
