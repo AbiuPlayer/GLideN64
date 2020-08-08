@@ -13,3 +13,4 @@ cmake [-DCMAKE_BUILD_TYPE=Debug] [-DVEC4_OPT=On] [-DCRC_OPT=On] [-DX86_OPT=On] [
 -DMUPENPLUSAPI=On - required parameter. currently cmake build works only for mupen64plus version of the plugin.
 -DODROID=On - set if you need to build on an Odroid board.
 -DVERO4K=On - set if you need to build on the OSMC Vero4k.
+-DRKMS=On - set if you need to build on the KMS.
